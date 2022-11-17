@@ -21,12 +21,14 @@ public class Main {
         writer.write(q1);
 
         // read response
-        Boolean ans1 = reader.readLine().equals("Yep");
+        String ans = reader.readLine();
 
         //TODO
         // the reader should accept the following values as true:
         // "true", "yes", "oh yeah", "great", "sure", "love to", "of course", "always", "never done otherwise"
 
+        Adapter adapter = new Adapter(ans);
+        Boolean ans1 = adapter.ReturnAnswer();
 
         if (ans1) {
             writer.write(good);
